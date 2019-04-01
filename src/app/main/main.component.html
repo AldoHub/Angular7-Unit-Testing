@@ -1,0 +1,35 @@
+
+<header>
+  <h1>Angular Unit Testing</h1>
+</header>
+
+
+<section>
+  <h2>Benefits of Unit Testing</h2>
+
+  <p>Let´s go first through what I think are the main reasons to use unit testing in your solution…</p>
+  <dl>
+    <div *ngFor="let reason of reasons">
+      <dt>{{reason.reason}}</dt>
+      <dd>{{reason.description}}</dd>
+    </div>
+  </dl>
+
+</section>
+
+<section>
+  <h2>Subscribe to our Newsletter</h2>
+  <form (ngSubmit)="sendRequest(requestForm.value)" [formGroup]="requestForm">
+      <a routerLink='/'> <i class="fas fa-arrow-left"></i> Back</a>
+    <p>Fill the form to add a new post.</p>  
+    <label for="title">Email:</label>
+    <input type="text" formControlName="email">
+  
+    <label for="content">Content:</label>
+    <textarea formControlName="content"></textarea>
+
+   
+  
+    <input id="submit" type="submit" [disabled]="!requestForm.valid" value="Submit">
+  </form>
+</section>

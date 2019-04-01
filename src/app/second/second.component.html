@@ -1,0 +1,10 @@
+<div class="postsContainer">
+  <div *ngFor="let post of posts | async" class="post">
+   
+    <h2>{{post.title}}</h2>
+    <div>
+      {{post.body}}
+    </div>
+    <a [routerLink]="[ '/getsinglepost', post.id ]">Check Post</a>
+  </div>
+</div>

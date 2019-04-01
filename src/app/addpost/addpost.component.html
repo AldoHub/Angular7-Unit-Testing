@@ -1,0 +1,14 @@
+<h2>Add a new post</h2>
+<form (ngSubmit)="sendPostRequest(postForm.value)" [formGroup]="postForm">
+    <a routerLink='/'> <i class="fas fa-arrow-left"></i> Back</a>
+  <p>Fill the form to add a new post.</p>  
+  <label for="title">title:</label>
+  <input type="text" formControlName="title">
+
+  <label for="body">Body:</label>
+  <textarea formControlName="body"></textarea>
+
+ 
+
+  <input id="submit" type="submit" [disabled]="!postForm.valid" value="Submit">
+</form>
